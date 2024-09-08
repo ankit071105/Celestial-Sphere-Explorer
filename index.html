@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Sphere Explorer</title>
+  <link rel="shortcut icon" href="https://ideogram.ai/assets/progressive-image/balanced/response/UnKbMTF8S32AYfSVS4JSeA" type="image/x-icon">
+    <style>
+
+body, h1, p, button, img {
+    margin: 0;
+            overflow: hidden;
+            background: #001f3f;
+}
+h1:hover{
+    color: antiquewhite;
+}
+p:hover{
+    color: antiquewhite;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #00070f, #001b36);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.caption {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.arrow {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.get-started {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: #2980b9;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.get-started:hover {
+    transform: scale(1.1);
+}
+
+.image {
+    width: 200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-radial-gradient(circle, rgba(200, 225, 227, 0.794), rgba(158, 236, 234, 0.483) 1px, transparent 1px, transparent 100px);
+    animation: spin 60s linear infinite;
+    z-index: 0;
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+body:hover::before {
+    animation: spin 3s linear infinite;
+}
+
+body:hover .image {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .caption {
+        font-size: 1.2rem;
+    }
+
+    .get-started {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .image {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .caption {
+        font-size: 1rem;
+    }
+
+    .get-started {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .image {
+        width: 120px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="heading">Celestial Sphere Explorer</h1>
+            <p class="caption">Empowering the voiceless through Morse code communication</p>
+            <img src="https://ideogram.ai/assets/progressive-image/balanced/response/fFjEQpUcTKSSW6B1T51L6Q" alt="Silent Speak" class="image" style="border-radius: 100%;">
+            <div class="arrow">
+                <span>&darr;</span>
+            </div>
+       <a href="main.html">     <button class="get-started">Get Started</button></a>
+        </div>
+    </div>
+</body>
+</html>
